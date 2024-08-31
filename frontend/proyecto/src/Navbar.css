@@ -1,0 +1,78 @@
+/* Reiniciar márgenes y rellenos globales */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos de la barra de navegación */
+.Navbar {
+  background-color: #212529; /* Color de fondo rojo */
+  color: white; /* Color del texto blanco */
+  padding: 10px;
+  margin: 0; /* Elimina cualquier margen exterior */
+  box-sizing: border-box; /* Asegura que el padding no añada más al ancho total */
+}
+
+.Navbar nav {
+  display: flex;
+  align-items: center; /* Alinea verticalmente todos los elementos */
+  justify-content: space-between; /* Espacia los elementos dentro del nav */
+}
+
+.Navbar .logo-container {
+  padding-left: 50px;
+  display: flex;
+  align-items: center; /* Alinea verticalmente el logo y el texto */
+}
+
+.Navbar img {
+  height: 80px; /* Ajusta la altura de la imagen del logo */
+}
+
+.Navbar .logo-text {
+  font-family:Arial, Helvetica, sans-serif;/*tipo de letra*/
+  font-size: 20px;/*Tamaño letra logo*/
+  margin-left: 20px; /* Espacio entre el logo y el texto */
+  font-weight: bold; /* Texto en negrita */
+  color: white;
+}
+
+.Navbar ul {
+  list-style-type: none; /* Elimina los puntos de lista */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos de la lista */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;/*Tamaño letra menu*/
+}
+
+.Navbar li {
+  margin-right: 15px; /* Espacio entre los elementos de la lista */
+}
+
+.Navbar a {
+  text-decoration: none; /* Elimina el subrayado por defecto */
+  color: white; /* Color de texto por defecto */
+  transition: all 0.3s ease; /* Transición suave para el cambio de tamaño y color */
+  font-size: 18px;
+}
+
+.Navbar a:hover {
+  text-decoration: underline; /* Subrayado en el hover */
+  color: #ffc107; /* Cambia el color al pasar el cursor */
+  font-size: 1.2em; /* Aumenta el tamaño del texto en el hover */
+}
+
+.Search-box {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el input de búsqueda */
+  margin-right: 30px;
+}
+
+.Search-box input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}

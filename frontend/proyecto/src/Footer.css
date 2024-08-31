@@ -1,0 +1,54 @@
+/* Estilo para el pie de página */
+.footer {
+    background-color:  #212529; /* Color de fondo claro */
+    padding: 1rem 2rem; /* Espaciado interno del footer */
+    border-top: none; /* Línea superior de separación */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    padding: 40px;
+  }
+  
+  /* Contenedor principal del contenido del footer */
+  .footer-content {
+    display: flex; /* Usar flexbox para organizar el contenido */
+    justify-content: space-between; /* Espaciado entre el contenido izquierdo y derecho */
+    align-items: center; /* Alineación vertical centrada */
+  }
+  
+  /* Estilo para la sección izquierda del footer */
+  .footer-left {
+    flex: 1; /* Permite que el .footer-left ocupe el espacio disponible */
+    display: flex;
+    margin-left: 150px; /* Ajusta este valor según sea necesario para moverlo hacia la izquierda */
+  }
+  
+  /* Estilo para la sección derecha del footer */
+  .footer-right {
+    display: flex; /* Usar flexbox para organizar el contenido */
+    flex-direction: column; /* Organizar los elementos en una columna */
+    align-items: flex-end; /* Alinear los elementos a la derecha */
+    margin-right: 150px;
+  }
+  
+  /* Estilo para los íconos de redes sociales */
+  .social-icons {
+    display: flex; /* Usar flexbox para organizar los íconos */
+    gap: 1rem; /* Espacio entre los íconos */
+    margin-top: 0.5rem; /* Espacio superior para separar del texto */
+    margin-right: 120px;
+  }
+  
+  /* Estilo para los íconos de redes sociales */
+  .social-icons a {
+    color: whitesmoke; /* Color de los íconos */
+    font-size: 1.5rem; /* Tamaño de los íconos */
+    text-decoration: none; /* Quitar subrayado */
+  }
+  
+  /* Cambiar color de los íconos al pasar el ratón */
+  .social-icons a:hover {
+    color: #007bff; /* Color azul para el hover */
+  }
+  
+  

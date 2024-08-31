@@ -1,0 +1,133 @@
+/* Eliminar márgenes y relleno de la página */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos de la sección principal de la página */
+.home {
+  text-align: center;
+  padding: 0; /* Elimina el padding alrededor del contenedor principal */
+}
+
+/* Estilos del carrusel */
+.carousel {
+  position: relative;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin: 0; /* Elimina cualquier margen */
+  overflow: hidden;
+  border-radius: 0; /* Quita el borde redondeado si se desea un borde continuo */
+}
+
+.carousel-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel img {
+  width: 100%; /* La imagen ocupa todo el ancho del carrusel */
+  height: 900px; /*alturA*/
+  border-radius: 0; /* Quita el borde redondeado si se desea un borde continuo */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+/* Estilos para el contenedor de imágenes */
+.image-container {
+  background-color:  #212529;
+  display: flex; /* Usa flexbox para alinear las imágenes en una fila */
+  flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias filas si es necesario */
+  justify-content: center; /* Centra las imágenes horizontalmente en el contenedor */
+  gap: 200px; /* Espacio entre las imágenes */
+  padding: 40px; /* Padding alrededor del contenedor */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
+}
+
+/* Estilos para las imágenes dentro del contenedor */
+.image-container img {
+  width: 150px; /* Ajusta el ancho de las imágenes */
+  height:100PX; /* altura
+  border-radius: 5px; /* Opcional: Añade bordes redondeados */
+}
+
+/* Estilos sedes*/
+
+.container-fluid {
+  background-color: white; /* Establece el color de fondo del contenedor en blanco */
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Estilo para el título de las sucursales */
+.branch-title {
+  text-align: center; /* Centra el texto del título horizontalmente */
+  margin-top: 0%; /* Agrega un margen superior de 4 rem para separar del contenido anterior */
+  padding-top: 4%; /* Agrega un relleno superior de 5 rem para separar el contenido del borde superior */
+}
+
+/* Contenedor que organiza las sucursales en una fila flexible */
+.branches-container {
+  display: flex; /* Configura el contenedor para usar el modelo de caja flexible (flexbox) */
+  justify-content: space-around; /* Distribuye el espacio libre uniformemente alrededor de los elementos hijos */
+  flex-wrap: wrap; /* Permite que los elementos hijos se envuelvan en una nueva línea si no caben en la misma fila */
+}
+
+/* Estilo para cada elemento de sucursal */
+.branch {
+  flex: 1 1 45%; /* Permite que el elemento ocupe aproximadamente el 45% del ancho del contenedor, ajustándose según el espacio disponible */
+  padding: 2rem; /* Agrega un relleno interno de 2 rem alrededor del contenido del elemento */
+  box-sizing: border-box; /* Incluye el padding y los bordes en el cálculo del ancho total del elemento */
+  text-align: center; /* Centra el texto horizontalmente dentro del elemento */
+}
+
+/* Estilo para el nombre de la sucursal */
+.branch-name {
+  margin-bottom: 1rem; /* Agrega un margen inferior de 1 rem para separar del contenido siguiente */
+}
+
+/* Estilo para la dirección de la sucursal */
+.branch-address {
+  font-size: 22px;
+  margin-bottom: 1rem; /* Agrega un margen inferior de 1 rem para separar del contenido siguiente */
+}
+
+/* Estilo para la descripción de la sucursal */
+.branch-description {
+  margin-bottom: 1rem; /* Agrega un margen inferior de 1 rem para separar del contenido siguiente */
+  font-size: 20px;
+}
+
+/* Estilo para el contacto de la sucursal */
+.branch-contact {
+  margin-bottom: 2rem; /* Agrega un margen inferior de 2 rem para separar del contenido siguiente */
+}
+.branch img {
+  max-width: 450px; /* Asegura que la imagen no exceda el ancho del contenedor de la sucursal */
+  height: auto; /* Mantiene la proporción de la imagen */
+  display: block; /* Elimina el espacio debajo de la imagen causado por el alineamiento de texto */
+  margin: 0 auto; /* Centra la imagen horizontalmente dentro del contenedor */
+}
+
+
+
+

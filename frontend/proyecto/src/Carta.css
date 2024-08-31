@@ -1,0 +1,52 @@
+/* Estilos globales para Carta */
+
+.navbar {
+    margin-bottom: 20px;
+  }
+  
+  .center {
+    display: block;
+    margin: auto;
+  }
+  
+  .card-img-top {
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  footer {
+    background-color: #343a40;
+  }
+  
+  footer .bi {
+    font-size: 1.5rem;
+  }
+  
+  .bg-dark {
+    background-color: #343a40 !important;
+  }
+  
+  .bg-warning {
+    background-color: #ffc107 !important;
+  }
+  
+  .text-white {
+    color: #fff !important;
+  }
+  
+  .text-dark {
+    color: #000 !important;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .nav-link.active {
+    background-color: #343a40 !important;
+  }

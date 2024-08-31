@@ -1,0 +1,118 @@
+/* Contenedor principal del formulario */
+.Login {
+  display: flex; /* Utiliza Flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 73vh; /* Ocupa toda la altura de la ventana */
+  background-color: brown; /* Color de fondo opcional para contraste */
+  margin: none;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.Login-form {
+  background: #FFC107; /* Fondo blanco para el formulario */
+  padding: 2rem; /* Espaciado interno del formulario */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para efecto de elevación */
+  width: 100%; /* Ocupa el 100% del ancho del contenedor */
+  max-width: 500px; /* Ancho máximo para el formulario */
+  height: 400px;
+
+}
+
+/* Estilo para el título del formulario */
+.Login-form h1 {
+  margin-bottom: 2rem; /* Espacio debajo del título */
+  text-align: center; /* Centra el texto */
+  font-size: 1.5rem; /* Tamaño de fuente del título */
+  color: #333; /* Color del texto */
+}
+
+/* Estilo para los contenedores de los campos del formulario */
+.Login-form div {
+  margin-bottom: 1.5rem; /* Espacio entre campos del formulario */
+}
+
+/* Estilo para las etiquetas de los campos del formulario */
+.Login-form label {
+  display: block; /* Hace que la etiqueta ocupe toda la línea */
+  margin-bottom: 0.5rem; /* Espacio debajo de la etiqueta */
+  font-weight: bold; /* Texto en negrita */
+  color: black; /* Color del texto */
+}
+
+/* Estilo para los campos de entrada */
+.Login-form input {
+  
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  padding: 0.75rem; /* Espaciado interno dentro del campo de entrada */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluye el padding y borde en el tamaño total */
+}
+
+/* Estilo para el botón de enviar */
+
+.Login-form button[type="submit"] {
+  margin-top: 20px;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  padding: 0.75rem; /* Espaciado interno del botón */
+  background-color: #212529; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  font-size: 1rem; /* Tamaño de fuente del botón */
+}
+
+/* Efecto al pasar el cursor sobre el botón de enviar */
+.Login-form button[type="submit"]:hover {
+  background-color:  #007bff; /* Cambia el color de fondo cuando se pasa el cursor */
+  
+}
+
+/* Estilos para el contenedor y el botón de mostrar/ocultar contraseña */
+.password-container {
+  position: relative; /* Permite que los elementos hijos se posicionen absolutamente */
+}
+
+.password-container input {
+  width: calc(100% - 80px); /* Deja espacio para el botón de mostrar/ocultar */
+}
+
+.password-container .toggle-password {
+  position: absolute; /* Posiciona el botón de manera absoluta dentro del contenedor */
+  top: 50%; /* Alinea verticalmente al centro del campo de entrada */
+  right: 10px; /* Espacio desde el borde derecho */
+  transform: translateY(-50%); /* Ajusta la posición verticalmente para centrarlo */
+  background-color: #e9ecef; /* Color de fondo del botón */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 0.25rem 0.5rem; /* Espaciado interno del botón */
+  font-size: 0.9rem; /* Tamaño de fuente del botón */
+  color: black; /* Color del texto del botón */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  z-index: 1; /* Asegura que el botón esté encima del campo de entrada */
+}
+
+/* Efecto al pasar el cursor sobre el botón de mostrar/ocultar contraseña */
+.password-container .toggle-password:hover {
+  background-color: black; /* Cambia el color de fondo cuando se pasa el cursor */
+  color: white;
+}
+
+/* Estilos para el enlace de recuperación de contraseña */
+.recover-password-link {
+  display: block; /* Hace que el enlace ocupe toda la línea */
+  margin-top: 2rem; /* Espacio arriba del enlace */
+  text-align: center; /* Centra el texto del enlace */
+  color: white; /* Color del texto del enlace */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  font-size: 0.875rem; /* Tamaño de fuente del enlace */
+  font-size: 15px;
+}
+
+/* Efecto al pasar el cursor sobre el enlace de recuperación de contraseña */
+.recover-password-link:hover {
+  text-decoration: underline; /* Subraya el enlace cuando se pasa el cursor */
+}
