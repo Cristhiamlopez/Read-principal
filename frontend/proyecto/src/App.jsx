@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Login from "./Login";
 import Home from "./Home";
 import Carta from "./Carta";
+import Inicio from "./Inicio";
 import Footer from "./Footer";
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Carta" element={<Carta />} />
+        <Route path="/Inicio" element={<Inicio />} />
+        
         
       </Routes>
 

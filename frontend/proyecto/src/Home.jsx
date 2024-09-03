@@ -1,8 +1,8 @@
 import React from 'react';
 import Carousel from './Carousel';
 import './home.css';
-import image1 from './assets/Carrousel/carne.png';
-import image2 from './assets/Carrousel/hamburguesa.png';
+import image1 from './assets/Carrousel/hamburguesa.png';
+import image2 from './assets/Carrousel/carne.png';
 import image3 from './assets/Carrousel/salchipapa.png';
 import image4 from './assets/Aliados/bimbo.png';
 import image5 from './assets/Aliados/carne.png';

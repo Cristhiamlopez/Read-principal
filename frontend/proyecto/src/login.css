@@ -1,9 +1,10 @@
 /* Contenedor principal del formulario */
 .Login {
+  font-family: Arial, Helvetica, sans-serif;
   display: flex; /* Utiliza Flexbox para centrar el contenido */
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  height: 73vh; /* Ocupa toda la altura de la ventana */
+  height: 72vh; /* Ocupa toda la altura de la ventana */
   background-color: brown; /* Color de fondo opcional para contraste */
   margin: none;
 }
@@ -11,7 +12,7 @@
 /* Estilos para el formulario de inicio de sesión */
 .Login-form {
   background: #FFC107; /* Fondo blanco para el formulario */
-  padding: 2rem; /* Espaciado interno del formulario */
+  padding:  1rem; /* Espaciado interno del formulario */
   border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para efecto de elevación */
   width: 100%; /* Ocupa el 100% del ancho del contenedor */

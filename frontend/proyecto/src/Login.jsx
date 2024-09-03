@@ -1,18 +1,25 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-import './login.css';
+import './Login.css';
 
 export function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
     function handleSubmit(event) {
         event.preventDefault();
         axios.post('http://localhost:8081/login', { email, password })
             .then(res => {
-                alert('Ingreso Correcto');
                 console.log(res);
+
+                if (res.status === 200){
+                    alert('Ingreso Correcto');
+                    navigate('/Inicio'); //lleva a la pagina de Inicio
+
+                }
             })
             .catch(err => {
                 // Muestra una alerta si hay un error en la solicitud

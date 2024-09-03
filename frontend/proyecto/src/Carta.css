@@ -1,52 +1,95 @@
-/* Estilos globales para Carta */
+/* Contenedor principal que envuelve el título principal y el contenedor de las cards */
+.main-container {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center; /* Centra el contenido de texto */
+  margin-bottom: 40px; /* Espacio entre el contenedor de cards y cualquier contenido siguiente */
+}
 
-.navbar {
-    margin-bottom: 20px;
-  }
-  
-  .center {
-    display: block;
-    margin: auto;
-  }
-  
-  .card-img-top {
-    width: 200px;
-    height: 160px;
-    object-fit: cover;
-  }
-  
-  footer {
-    background-color: #343a40;
-  }
-  
-  footer .bi {
-    font-size: 1.5rem;
-  }
-  
-  .bg-dark {
-    background-color: #343a40 !important;
-  }
-  
-  .bg-warning {
-    background-color: #ffc107 !important;
-  }
-  
-  .text-white {
-    color: #fff !important;
-  }
-  
-  .text-dark {
-    color: #000 !important;
-  }
-  
-  .container {
-    margin-top: 20px;
-  }
-  
-  .card-body {
-    padding: 15px;
-  }
-  
-  .nav-link.active {
-    background-color: #343a40 !important;
-  }
+/* Estilos para el título principal */
+.header {
+  margin-bottom: 30px; /* Espacio inferior para separar del contenedor de cards */
+}
+
+/* Título principal */
+.main-title {
+  padding-top: 30px;
+  font-size: 2.5rem; /* Tamaño de fuente grande para el título principal */
+  margin: 0; /* Sin margen para ajustar la separación */
+}
+
+/* Contenedor principal de las cards */
+.card-container,
+.card-container2,
+.card-container3 {
+  background-color: #212529;
+  padding: 20px;
+  display: flex; /* Usa Flexbox para organizar los elementos */
+  flex-direction: column; /* Organiza los elementos verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  border-radius: 20px; /* Bordes redondeados para el contenedor de las cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle un efecto elevado */
+  max-width: 1300px; /* Ancho máximo para el contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  margin-bottom: 100px; /* Espacio inferior para separar contenedores */
+}
+
+/* Estilos para el subtítulo dentro del contenedor de las cards */
+.sub-title {
+  font-size: 1.5rem; /* Tamaño de fuente para el subtítulo */
+  color: white; /* Color blanco para el subtítulo */
+  margin-bottom: 20px; /* Espacio inferior para separar del contenedor de cards */
+}
+
+/* Contenedor que envuelve las cards dentro del contenedor de cards */
+.card-grid {
+  display: grid; /* Usa Grid Layout para organizar las cards */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas, cada una ocupando un tercio del ancho del contenedor */
+  gap: 20px; /* Espacio entre las cards */
+  padding: 20px; /* Espacio interno alrededor del contenedor de las cards */
+  max-width: 100%; /* Ancho máximo para el contenedor de las cards */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos individuales para cada card */
+/* Estilos individuales para cada card */
+.card {
+  background-color: #FFC107; /* Color de fondo amarillo para las cards */
+  border-radius: 8px; /* Bordes redondeados para darle un aspecto suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle un efecto elevado */
+  padding: 15px; /* Espaciado interno para el contenido dentro de la card */
+  text-align: center; /* Centra el texto y otros contenidos dentro de la card */
+  width: 100%; /* Ancho de la card ajustado al contenedor */
+  max-width: 400px; /* Ancho máximo para cada card */
+  height: 500px; /* Altura fija reducida para las cards */
+  display: flex; /* Usa Flexbox para alinear el contenido verticalmente */
+  flex-direction: column; /* Organiza los elementos verticalmente */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  box-sizing: border-box; /* Incluye el padding y los bordes en el ancho total */
+}
+
+
+/* Contenedor de imagen dentro de la card */
+.card-image-container {
+  height: 60%; /* Altura fija para el contenedor de la imagen */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga del contenedor */
+  border-radius: 8px 8px 0 0; /* Bordes superiores redondeados para coincidir con la card */
+}
+
+/* Estilos para la imagen en la parte superior de la card */
+.card-image {
+  width: 100%; /* Ancho de la imagen igual al ancho del contenedor */
+  height: 100%; /* Altura de la imagen igual a la altura del contenedor */
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarla */
+}
+
+/* Estilos para el título de cada card */
+.card-title {
+  font-size: 1.5rem; /* Tamaño de fuente para el título */
+  margin: 5px 0 5px 0; /* Espaciado superior e inferior para separar el título de la imagen y el párrafo */
+}
+
+/* Estilos para el párrafo de cada card */
+.card-text {
+  font-size: 1rem; /* Tamaño de fuente para el texto del párrafo */
+  color: #555; /* Color gris oscuro para el texto */
+}

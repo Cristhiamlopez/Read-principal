@@ -1,84 +1,113 @@
 import React from 'react';
-import './Carta.css'; // Asegúrate de que el archivo CSS esté en la misma carpeta
+import './Carta.css'; // Archivo CSS para los estilos
 
-function Carta() {
-  return (
-    <div>
-      {/* Menu */}
-      
+// Importar imágenes de entradas
+import imagen10 from './assets/Carta/Entradas/aroscebolla.jpg';
+import imagen11 from './assets/Carta/Entradas/papaschorizo.jpg'; 
+import imagen12 from './assets/Carta/Entradas/Empanadas.jpg';
+import imagen13 from './assets/Carta/Entradas/sopa.jpg';
+import imagen14 from './assets/Carta/Entradas/ensalada.jpg';
+import imagen15 from './assets/Carta/Entradas/papasqueso.jpg';
 
-      <h2 className="text-center mt-4">NUESTRO MENU</h2>
+// Importar imágenes para platos fuertes
+import imagen16 from './assets/Carta/Platosfuertes/hamburguesa.jpg';
+import imagen17 from './assets/Carta/Platosfuertes/doblecarne.jpg'; 
+import imagen18 from './assets/Carta/Platosfuertes/triplecarne.jpg';
+import imagen19 from './assets/Carta/Platosfuertes/perro.jpg';
+import imagen20 from './assets/Carta/Platosfuertes/Choriperro.jpg';
+import imagen21 from './assets/Carta/Platosfuertes/salchipapa.jpg';
+import imagen22 from './assets/Carta/Platosfuertes/carne.jpg';
+import imagen23 from './assets/Carta/Platosfuertes/pechuga.jpg';
+import imagen24 from './assets/Carta/Platosfuertes/costillas.jpg';
 
-      {/* Menu entradas */}
-      <div className="container bg-dark pb-5 text-center">
-        <h3 className="text-white mt-4 pt-4">ENTRADAS</h3>
-        <div className="row mt-4 mx-5">
-          <div className="col-md-4 p-2">
-            <div className="card bg-warning">
-              <img src="img/menu/entradas/aros de cebolla.jpg" className="card-img-top" alt="Aros de cebolla" />
-              <div className="card-body">
-                <h4>Aros de cebolla</h4>
-                <p className="card-text">Aros de cebolla apanados con salsa de la casa</p>
-              </div>
+// Importar imágenes para bebidas
+import imagen25 from './assets/Carta/Bebidas/agua.jpg';
+import imagen26 from './assets/Carta/Bebidas/cerveza.jpg'; 
+import imagen27 from './assets/Carta/Bebidas/cocacola.jpg';
+import imagen28 from './assets/Carta/Bebidas/limonada.jpg';
+import imagen29 from './assets/Carta/Bebidas/limonadacoco.jpg';
+import imagen30 from './assets/Carta/Bebidas/limonadah.png';
+
+const Carta = () => {
+    const cards = [
+        { id: 1, title: 'Aros de cebolla', image: imagen10, text: 'Este es el párrafo de la card 1.' },
+        { id: 2, title: 'Chorizos a la parrilla', image: imagen11, text: 'Este es el párrafo de la card 2.' },
+        { id: 3, title: 'Empanadas mixtas', image: imagen12, text: 'Este es el párrafo de la card 3.' },
+        { id: 4, title: 'Sopa de la casa', image: imagen13, text: 'Este es el párrafo de la card 4.' },
+        { id: 5, title: 'Ensalada a la parrilla', image: imagen14, text: 'Este es el párrafo de la card 5.' },
+        { id: 6, title: 'Papas con queso', image: imagen15, text: 'Este es el párrafo de la card 6.' },
+    ];
+
+    const cards2 = [
+        { id: 1, title: 'Hamburguesa a la parrilla', image: imagen16, text: 'Descripción del plato 1.' },
+        { id: 2, title: 'Plato 2', image: imagen17, text: 'Descripción del plato 2.' },
+        { id: 3, title: 'Plato 3', image: imagen18, text: 'Descripción del plato 3.' },
+        { id: 4, title: 'Plato 4', image: imagen19, text: 'Descripción del plato 4.' },
+        { id: 5, title: 'Plato 5', image: imagen20, text: 'Descripción del plato 5.' },
+        { id: 6, title: 'Plato 6', image: imagen21, text: 'Descripción del plato 6.' },
+        { id: 7, title: 'Plato 7', image: imagen22, text: 'Descripción del plato 7.' },
+        { id: 8, title: 'Plato 8', image: imagen23, text: 'Descripción del plato 8.' },
+        { id: 9, title: 'Plato 9', image: imagen24, text: 'Descripción del plato 9.' },
+    ];
+
+    const cards3 = [
+        { id: 1, title: 'Agua', image: imagen25, text: 'Este es el párrafo de la card 1.' },
+        { id: 2, title: 'Cerveza', image: imagen26, text: 'Este es el párrafo de la card 2.' },
+        { id: 3, title: 'Coca Cola', image: imagen27, text: 'Este es el párrafo de la card 3.' },
+        { id: 4, title: 'Limonada', image: imagen28, text: 'Este es el párrafo de la card 4.' },
+        { id: 5, title: 'Limonada de Coco', image: imagen29, text: 'Este es el párrafo de la card 5.' },
+        { id: 6, title: 'Limonada Hierbabuena', image: imagen30, text: 'Este es el párrafo de la card 6.' },
+    ];
+
+    return (
+        <div className="main-container">
+            <header className="header">
+                <h1 className="main-title">NUESTRO MENU</h1> {/* Título principal */}
+            </header>
+            <div className="card-container">
+                <h2 className="sub-title">ENTRADAS</h2> {/* Subtítulo dentro del contenedor de las cards */}
+                <div className="card-grid">
+                    {cards.map(card => (
+                        <div key={card.id} className="card">
+                            <div className="card-image-container">
+                                <img src={card.image} alt={card.title} className="card-image" />
+                            </div>
+                            <h3 className="card-title">{card.title}</h3>
+                            <p className="card-text">{card.text}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-          </div>
-          {/* Repite para otras entradas */}
+            <div className="card-container">
+                <h2 className="sub-title">PLATOS FUERTES</h2> {/* Subtítulo dentro del contenedor de las cards */}
+                <div className="card-grid">
+                    {cards2.map(card => (
+                        <div key={card.id} className="card">
+                            <div className="card-image-container">
+                                <img src={card.image} alt={card.title} className="card-image" />
+                            </div>
+                            <h3 className="card-title">{card.title}</h3>
+                            <p className="card-text">{card.text}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="card-container">
+                <h2 className="sub-title">BEBIDAS</h2> {/* Subtítulo dentro del contenedor de las cards */}
+                <div className="card-grid">
+                    {cards3.map(card => (
+                        <div key={card.id} className="card">
+                            <div className="card-image-container">
+                                <img src={card.image} alt={card.title} className="card-image" />
+                            </div>
+                            <h3 className="card-title">{card.title}</h3>
+                            <p className="card-text">{card.text}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
-      </div>
-
-      {/* Platos fuertes */}
-      <div className="container bg-white pb-5 text-center">
-        <h3 className="text-dark mt-4 pt-4">PLATOS FUERTES</h3>
-        <div className="row mt-4 mx-5">
-          <div className="col-md-4 p-2">
-            <div className="card bg-warning">
-              <img src="img/menu/Platos fuertes/dia-hamburguesa-m.jpg" className="card-img-top" alt="Hamburguesa a la parrilla" />
-              <div className="card-body">
-                <h4>Hamburguesa a la parrilla</h4>
-                <p className="card-text">Hamburguesa a la parrilla con verduras</p>
-              </div>
-            </div>
-          </div>
-          {/* Repite para otros platos fuertes */}
-        </div>
-      </div>
-
-      {/* Bebidas */}
-      <div className="container bg-dark pb-5 text-center mb-5">
-        <h3 className="text-white mt-4 pt-4">BEBIDAS</h3>
-        <div className="row mt-4 mx-5">
-          <div className="col-md-4 p-2">
-            <div className="card bg-warning">
-              <img src="img/menu/Bebidas/limonada.jpg" className="card-img-top" alt="Limonada natural sin azúcar" />
-              <div className="card-body">
-                <h4>Limonada natural sin azúcar</h4>
-                <p className="card-text">Deliciosa limonada natural</p>
-              </div>
-            </div>
-          </div>
-          {/* Repite para otras bebidas */}
-        </div>
-      </div>
-
-      <footer>
-        <div className="container-fluid bg-dark text-center p-4 mb-1">
-          <div className="row text-white">
-            <div className="col-12 col-md-6 bg-dark pt-5 px-5">
-              <h6>EL CORRIDO PARRILLA TU MEJOR OPCIÓN SI ESTÁS EN BOGOTÁ</h6>
-            </div>
-            <div className="col-12 col-md-6 bg-dark p-4">
-              <p>Síguenos en nuestras redes sociales</p>
-              <i className="bi bi-facebook p-2"></i>
-              <i className="bi bi-instagram p-2"></i>
-              <i className="bi bi-tiktok p-2"></i>
-              <i className="bi bi-twitter p-2"></i>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-    </div>
-  );
-}
+    );
+};
 
 export default Carta;
