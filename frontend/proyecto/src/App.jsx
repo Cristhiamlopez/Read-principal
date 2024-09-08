@@ -6,6 +6,8 @@ import Home from "./Home";
 import Carta from "./Carta";
 import Inicio from "./Inicio";
 import Footer from "./Footer";
+import Register from "./Register";
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Carta" element={<Carta />} />
         <Route path="/Inicio" element={<Inicio />} />
+        <Route path="/Register" element={<Register />} />
         
         
       </Routes>

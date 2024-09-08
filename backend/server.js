@@ -30,6 +30,34 @@ app.post('/login', (req, res) => {
     });
 });
 
+// ruta de registro
+app.post('/Register', (req, res) => {
+    const { email, password } = req.body;
+
+    const dbcheck = "SELECT * FROM administrador WHERE email = ?";
+    conexion.query(dbcheck, [email], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ success: false, message: "Error en el servidor al verificar el correo." });
+        }
+
+        if (data.length > 0) {
+            return res.status(400).json({ success: false, message: "El correo ya se encuentra registrado" });
+        } else {
+            // ingresar al usuario nuevo en la base de datos con la contraseña en texto plano
+            const dbinsert = "INSERT INTO administrador (email, contraseña) VALUES (?, ?)";
+            conexion.query(dbinsert, [email, password], (err, data) => {
+                if (err) {
+                    console.error(err);
+                    return res.status(500).json({ success: false, message: "Error en el servidor al crear el usuario." });
+                }
+                return res.status(200).json({ success: true, message: "Usuario creado con éxito" });
+            });
+        }
+    });
+});
+
+
 // 5 - Poner a escuchar al servidor
 app.listen(8081, () => {
     console.log("Servidor escuchando en el puerto 8081...");

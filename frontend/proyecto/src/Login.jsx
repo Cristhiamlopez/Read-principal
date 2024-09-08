@@ -11,6 +11,18 @@ export function Login() {
 
     function handleSubmit(event) {
         event.preventDefault();
+        
+        // Validación básica
+
+        if (!email || !password) {
+            alert('Por favor, complete todos los campos.');
+            return;
+        }
+    
+        if (!/\S+@\S+\.\S+/.test(email)) {
+            alert('Por favor, ingrese un correo electrónico válido.');
+            return;
+        }
         axios.post('http://localhost:8081/login', { email, password })
             .then(res => {
                 console.log(res);
@@ -22,8 +34,9 @@ export function Login() {
                 }
             })
             .catch(err => {
-                // Muestra una alerta si hay un error en la solicitud
-                alert('Email o contraseña incorrectos');
+                // Muestra el mensaje de error específico si está disponible
+                const errorMessage = err.response?.data?.message || 'Email o contraseña incorrectos';
+                alert(errorMessage);
                 console.log(err);
             });
     }
@@ -63,6 +76,7 @@ export function Login() {
                 </div>
                 <button type="submit">INGRESAR</button>
                 <a href="/recover-password" className="recover-password-link">¿Olvidaste tu contraseña?</a>
+                <a href="/Register" className="recover-password-link">REGISTRARSE</a>
             </form>
         </main>
     );
