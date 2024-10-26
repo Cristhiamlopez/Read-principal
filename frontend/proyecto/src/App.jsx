@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
-import Login from "./assets/Login";
+import Login from "./Login";
 import Home from "./Home";
 import Carta from "./Carta";
 import Inicio from "./Inicio";
 import Footer from "./Footer";
-import Register from "./assets/Register";
+import Register from "./Register";
 
 
 function App() {
