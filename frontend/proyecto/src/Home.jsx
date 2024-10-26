@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from './Carousel';
-import './home.css';
+import './Home.css';
 import image1 from './assets/Carrousel/hamburguesa.png';
 import image2 from './assets/Carrousel/carne.png';
 import image3 from './assets/Carrousel/salchipapa.png';
