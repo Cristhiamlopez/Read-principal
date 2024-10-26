@@ -30,33 +30,33 @@ import imagen30 from './assets/Carta/Bebidas/limonadah.png';
 
 const Carta = () => {
     const cards = [
-        { id: 1, title: 'Aros de cebolla', image: imagen10, text: 'Este es el párrafo de la card 1.' },
-        { id: 2, title: 'Chorizos a la parrilla', image: imagen11, text: 'Este es el párrafo de la card 2.' },
-        { id: 3, title: 'Empanadas mixtas', image: imagen12, text: 'Este es el párrafo de la card 3.' },
-        { id: 4, title: 'Sopa de la casa', image: imagen13, text: 'Este es el párrafo de la card 4.' },
-        { id: 5, title: 'Ensalada a la parrilla', image: imagen14, text: 'Este es el párrafo de la card 5.' },
-        { id: 6, title: 'Papas con queso', image: imagen15, text: 'Este es el párrafo de la card 6.' },
+        { id: 1, title: 'Aros de cebolla', image: imagen10, text: 'Aros de cebolla apanados con salsa de la casa' },
+        { id: 2, title: 'Chorizos a la parrilla', image: imagen11, text: '10 chorizos cocteleros a la parrilla con chimichurri' },
+        { id: 3, title: 'Empanadas mixtas', image: imagen12, text: '6 mini empanadas de carne y pollo con ají' },
+        { id: 4, title: 'Sopa de la casa', image: imagen13, text: 'Deliciosa sopa de verduras con pan de la casa tostado' },
+        { id: 5, title: 'Ensalada a la parrilla', image: imagen14, text: 'Ensalada de lechuga, tomate a la parrilla y queso asado' },
+        { id: 6, title: 'Papas con queso', image: imagen15, text: 'Papas con carne cubiertas de queso chedar fundido' },
     ];
 
     const cards2 = [
-        { id: 1, title: 'Hamburguesa a la parrilla', image: imagen16, text: 'Descripción del plato 1.' },
-        { id: 2, title: 'Plato 2', image: imagen17, text: 'Descripción del plato 2.' },
-        { id: 3, title: 'Plato 3', image: imagen18, text: 'Descripción del plato 3.' },
-        { id: 4, title: 'Plato 4', image: imagen19, text: 'Descripción del plato 4.' },
-        { id: 5, title: 'Plato 5', image: imagen20, text: 'Descripción del plato 5.' },
-        { id: 6, title: 'Plato 6', image: imagen21, text: 'Descripción del plato 6.' },
-        { id: 7, title: 'Plato 7', image: imagen22, text: 'Descripción del plato 7.' },
-        { id: 8, title: 'Plato 8', image: imagen23, text: 'Descripción del plato 8.' },
-        { id: 9, title: 'Plato 9', image: imagen24, text: 'Descripción del plato 9.' },
+        { id: 1, title: 'Hamburguesa de la casa a la parrilla', image: imagen16, text: 'Hamburguesa a la parrilla con verduras' },
+        { id: 2, title: 'Hamburguesa doble carne', image: imagen17, text: 'Hamburguesa doble carne a la parrilla' },
+        { id: 3, title: 'Hamburguesa triple carne', image: imagen18, text: 'Hamburguesa triple carne a la parrilla' },
+        { id: 4, title: 'Perro caliente', image: imagen19, text: 'Perro caliente con salchicha americana y papas' },
+        { id: 5, title: 'Choriperro', image: imagen20, text: 'Perro com chorizo santarrosano y pico de gallo' },
+        { id: 6, title: 'Salchipapa', image: imagen21, text: 'Salchipapa con salsa de la casa y maiz tierno' },
+        { id: 7, title: 'Carne asada', image: imagen22, text: 'Deliciosa carne asada marinada con verduras' },
+        { id: 8, title: 'Pechuga a la parrilla', image: imagen23, text: 'Pechuga a la parrilla con verduras y salsa de miel' },
+        { id: 9, title: 'Costillas BBQ', image: imagen24, text: 'Deliciosas costillas con salsa BBQ casera y ensalada' },
     ];
 
     const cards3 = [
-        { id: 1, title: 'Agua', image: imagen25, text: 'Este es el párrafo de la card 1.' },
-        { id: 2, title: 'Cerveza', image: imagen26, text: 'Este es el párrafo de la card 2.' },
-        { id: 3, title: 'Coca Cola', image: imagen27, text: 'Este es el párrafo de la card 3.' },
-        { id: 4, title: 'Limonada', image: imagen28, text: 'Este es el párrafo de la card 4.' },
-        { id: 5, title: 'Limonada de Coco', image: imagen29, text: 'Este es el párrafo de la card 5.' },
-        { id: 6, title: 'Limonada Hierbabuena', image: imagen30, text: 'Este es el párrafo de la card 6.' },
+        { id: 1, title: 'Agua', image: imagen25, text: 'Agua con o sin gas' },
+        { id: 2, title: 'Cerveza', image: imagen26, text: 'Cervezas nacionales' },
+        { id: 3, title: 'Coca Cola', image: imagen27, text: 'Deliciosa Coca cola fria' },
+        { id: 4, title: 'Limonada', image: imagen28, text: 'Deliciosa limonada natural' },
+        { id: 5, title: 'Limonada de Coco', image: imagen29, text: 'Limonada natural de coco' },
+        { id: 6, title: 'Limonada Hierbabuena', image: imagen30, text: 'Limonada natural de hierbabuena' },
     ];
 
     return (

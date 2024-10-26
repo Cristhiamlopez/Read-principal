@@ -9,25 +9,26 @@
     margin: none;
   }
   
-  /* Estilos para el formulario de inicio de sesión */
-  .Register-form {
-    background: #FFC107; /* Fondo blanco para el formulario */
-    padding:  1rem; /* Espaciado interno del formulario */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para efecto de elevación */
-    width: 100%; /* Ocupa el 100% del ancho del contenedor */
-    max-width: 500px; /* Ancho máximo para el formulario */
-    height: 400px;
-  
-  }
-  
   /* Estilo para el título del formulario */
   .Register-form h1 {
     margin-bottom: 2rem; /* Espacio debajo del título */
     text-align: center; /* Centra el texto */
-    font-size: 1.5rem; /* Tamaño de fuente del título */
-    color: #333; /* Color del texto */
+    font-size: 30px; /* Tamaño de fuente del título */
+    color: black; /* Color del texto */
   }
+
+    /* Estilos para el formulario de inicio de sesión */
+    .Register-form {
+      background: #FFC107; /* Fondo blanco para el formulario */
+      padding:  1rem; /* Espaciado interno del formulario */
+      border-radius: 8px; /* Bordes redondeados */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para efecto de elevación */
+      width: 100%; /* Ocupa el 100% del ancho del contenedor */
+      max-width: 500px; /* Ancho máximo para el formulario */
+      height: 400px;
+      font-size: 25px;
+    
+    }
   
   /* Estilo para los contenedores de los campos del formulario */
   .Register-form div {
@@ -63,7 +64,7 @@
     border: none; /* Sin borde */
     border-radius: 4px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
-    font-size: 1rem; /* Tamaño de fuente del botón */
+    font-size: 20px; /* Tamaño de fuente del botón */
   }
   
   /* Efecto al pasar el cursor sobre el botón de enviar */
@@ -117,4 +118,83 @@
   .recover-password-link:hover {
     text-decoration: underline; /* Subraya el enlace cuando se pasa el cursor */
   }
+
+   /*Vista para tablet*/
+@media (max-width: 1000px) {
+
+  /* Estilo para el título del formulario */
+  .Register-form h1 {
+   margin-bottom: 2rem; /* Espacio debajo del título */
+   text-align: center; /* Centra el texto */
+   font-size: 20px; /* Tamaño de fuente del título */
+   color: black; /* Color del texto */
+ }
+
+   /* Estilos para el formulario de inicio de sesión */
+   .Register-form {
+     margin: 30px;
+     background: #FFC107; /* Fondo blanco para el formulario */
+     padding:  1rem; /* Espaciado interno del formulario */
+     border-radius: 8px; /* Bordes redondeados */
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para efecto de elevación */
+     width: 100%; /* Ocupa el 100% del ancho del contenedor */
+     max-width: 500px; /* Ancho máximo para el formulario */
+     height: 400px;
+     font-size: 18px;
+   
+   }
+
+ .Register-form button[type="submit"] {
+   margin-top: 20px;
+   width: 100%; /* Ocupa todo el ancho del contenedor */
+   padding: 0.75rem; /* Espaciado interno del botón */
+   background-color: #212529; /* Color de fondo del botón */
+   color: white; /* Color del texto del botón */
+   border: none; /* Sin borde */
+   border-radius: 4px; /* Bordes redondeados */
+   cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+   font-size: 17px; /* Tamaño de fuente del botón */
+ }
+ 
+}
+ 
+
+  /*Vista para celular*/
+@media (max-width: 600px) {
+
+   /* Estilo para el título del formulario */
+   .Register-form h1 {
+    margin-bottom: 2rem; /* Espacio debajo del título */
+    text-align: center; /* Centra el texto */
+    font-size: 16px; /* Tamaño de fuente del título */
+    color: black; /* Color del texto */
+  }
+
+    /* Estilos para el formulario de inicio de sesión */
+    .Register-form {
+      margin: 30px;
+      background: #FFC107; /* Fondo blanco para el formulario */
+      padding:  1rem; /* Espaciado interno del formulario */
+      border-radius: 8px; /* Bordes redondeados */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para efecto de elevación */
+      width: 100%; /* Ocupa el 100% del ancho del contenedor */
+      max-width: 500px; /* Ancho máximo para el formulario */
+      height: 400px;
+      font-size: 15px;
+    
+    }
+
+  .Register-form button[type="submit"] {
+    margin-top: 20px;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 0.75rem; /* Espaciado interno del botón */
+    background-color: #212529; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    font-size: 14px; /* Tamaño de fuente del botón */
+  }
+  
+}
   

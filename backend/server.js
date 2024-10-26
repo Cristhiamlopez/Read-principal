@@ -2,6 +2,7 @@
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
+const bcrypt = require("bcrypt"); // Importar bcrypt
 
 // 2 - Configuración
 const app = express();
@@ -17,25 +18,33 @@ const conexion = mysql.createConnection({
 });
 
 // 4 - Rutas
+// Ruta de inicio de sesión
 app.post('/login', (req, res) => {
-    const query = "SELECT * FROM administrador WHERE email = ? AND contraseña = ?";
-    conexion.query(query, [req.body.email, req.body.password], (err, data) => {
+    const query = "SELECT * FROM administrador WHERE email = ?";
+    conexion.query(query, [req.body.email], async (err, data) => {
         if (err) return res.status(500).json({ message: "Error en el servidor." });
 
         if (data.length > 0) {
-            return res.status(200).json({ message: "Ingreso Correcto" });
+            const user = data[0];
+            // Verificar la contraseña ingresada con la contraseña encriptada
+            const match = await bcrypt.compare(req.body.password, user.contraseña);
+            if (match) {
+                return res.status(200).json({ message: "Ingreso Correcto" });
+            } else {
+                return res.status(401).json({ message: "Email o contraseña incorrectos." });
+            }
         } else {
-            return res.status(401).json({ message: "Email o contraseña incorrectos." });
+            return res.status(401).json({ message: "Email o contraseña incorrectos." })
         }
     });
 });
 
-// ruta de registro
-app.post('/Register', (req, res) => {
+// Ruta de registro
+app.post('/Register', async (req, res) => {
     const { email, password } = req.body;
 
     const dbcheck = "SELECT * FROM administrador WHERE email = ?";
-    conexion.query(dbcheck, [email], (err, data) => {
+    conexion.query(dbcheck, [email], async (err, data) => {
         if (err) {
             console.error(err);
             return res.status(500).json({ success: false, message: "Error en el servidor al verificar el correo." });
@@ -44,9 +53,10 @@ app.post('/Register', (req, res) => {
         if (data.length > 0) {
             return res.status(400).json({ success: false, message: "El correo ya se encuentra registrado" });
         } else {
-            // ingresar al usuario nuevo en la base de datos con la contraseña en texto plano
+            // Encriptar la contraseña antes de guardarla
+            const hashedPassword = await bcrypt.hash(password, 10);
             const dbinsert = "INSERT INTO administrador (email, contraseña) VALUES (?, ?)";
-            conexion.query(dbinsert, [email, password], (err, data) => {
+            conexion.query(dbinsert, [email, hashedPassword], (err, data) => {
                 if (err) {
                     console.error(err);
                     return res.status(500).json({ success: false, message: "Error en el servidor al crear el usuario." });
@@ -56,7 +66,6 @@ app.post('/Register', (req, res) => {
         }
     });
 });
-
 
 // 5 - Poner a escuchar al servidor
 app.listen(8081, () => {

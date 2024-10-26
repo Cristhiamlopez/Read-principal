@@ -1,0 +1,172 @@
+/* Contenedor principal que envuelve el título principal y el contenedor de las cards */
+.main-containerini {
+    background-color: brown; /* Color de fondo marrón */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente del texto */
+    text-align: center; /* Centra el contenido de texto */
+    margin: 0;
+    padding: 10px;
+  }
+  
+  /* Estilos para el título principal */
+  .headerini {
+    margin-bottom: 20px; /* Espacio debajo del encabezado para separar del contenido siguiente */
+  }
+  
+  .main-titleini {
+    color: white; /* Color del texto del título principal */
+    padding-top: 20px; /* Espacio arriba del título principal */
+    font-size: 30px; /* Tamaño de fuente del título principal */
+    margin: 0; /* Sin márgenes alrededor del título */
+  }
+  
+  /* Contenedor principal de las cards */
+  .card-containerini {
+    background-color: #FFC107; /* Color de fondo amarillo */
+    padding: 20px; /* Espaciado interno del contenedor */
+    display: flex; /* Usar Flexbox para organizar los elementos */
+    flex-direction: column; /* Alinea los elementos en una columna (verticalmente) */
+    align-items: center; /* Centra los elementos horizontalmente */
+    border-radius: 20px; /* Bordes redondeados del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar efecto de profundidad */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+   margin-bottom: 50px;
+  }
+  /* Contenedor que envuelve las cards dentro del contenedor de cards */
+  .card-gridini {
+    background-color: #FFC107; /* Color de fondo amarillo */
+    display: grid; /* Usar Grid Layout para organizar las cards */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las cards */
+    padding: 20px; /* Espaciado interno alrededor de las cards */
+    max-width: 100%; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el grid horizontalmente */
+  }
+  /*Estilo indivial para cada card*/
+  .cardini {
+    background-color: #FFC107; /* Color de fondo de las cards */
+    border-radius: 8px; /* Bordes redondeados para las cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para las cards */
+    padding: 10px; /* Espaciado interno en las cards */
+    text-align: center; /* Centra el texto y contenido dentro de cada card */
+    width: 100%; /* Ancho completo dentro del contenedor */
+    max-width: 350px; /* Ancho máximo de cada card */
+    height: 300px; /* Altura fija de las cards */
+    display: flex; /* Flexbox para organizar el contenido dentro de cada card */
+    flex-direction: column; /* Alinea el contenido de las cards verticalmente */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    box-sizing: border-box; /* Incluye padding y bordes en el ancho y alto total */
+    border: 3px solid black; /* Borde negro sólido */
+  }
+  
+  .cardini:hover {
+    background-color: white; /* Color de fondo cuando pasas el mouse */
+}
+  
+  /* Contenedor de imagen dentro de la card */
+.card-image-containerini {
+    height: 300px; /* Altura fija para que todas las imágenes sean del mismo tamaño */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
+    padding: 0;
+    margin: 0;
+  
+}
+  
+  /* Imagen dentro de la card */
+  .card-imageini {
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+    height: 100%; /* La imagen ocupa el 100% de la altura del contenedor */
+    object-fit: contain; /* Ajusta la imagen para cubrir el contenedor, recortando los bordes si es necesario */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Título de la card */
+.card-titleini {
+    color: black; /* Color del texto */
+    font-size: 25px; /* Tamaño de la fuente */
+    margin: 10px 5px 15px; /* Ajusta el margen superior para dejar espacio */
+    padding: 0; /* Sin padding */
+    flex-grow: 1; /* Permite que el título use el espacio restante */
+    display: flex;
+    align-items: flex-start; /* Alinea el título hacia la parte superior */
+    justify-content: center; /* Centra el título horizontalmente */
+  }
+
+      /*Vista para tablet*/
+@media (max-width: 1000px) {
+
+  .main-titleini {
+    color: white; /* Color del texto del título principal */
+    padding-top: 20px; /* Espacio arriba del título principal */
+    font-size: 20px; /* Tamaño de fuente del título principal */
+    margin: 0; /* Sin márgenes alrededor del título */
+  }
+
+/* Contenedor que envuelve las cards dentro del contenedor de cards */
+  .card-gridini {
+    background-color: #FFC107; /* Color de fondo amarillo */
+    display: grid; /* Usar Grid Layout para organizar las cards */
+    grid-template-columns: repeat(3, 1fr); /* tres columnas de igual tamaño */
+  }
+   /*Estilo indivial para cada card*/
+   .cardini {
+    background-color: #FFC107; /* Color de fondo de las cards */
+    border-radius: 8px; /* Bordes redondeados para las cards */
+    padding: 10px; /* Espaciado interno en las cards */
+    text-align: center; /* Centra el texto y contenido dentro de cada card */
+    width: 150px; /* Ancho completo dentro del contenedor */
+    height: 200px; /* Altura fija de las cards */
+  }
+
+    /* Título de la card */
+.card-titleini {
+  font-size: 18px; /* Tamaño de la fuente */
+}
+
+/* Contenedor principal de las cards */
+.card-containerini {
+  max-width: 700px; /* Ancho máximo del contenedor */ 
+}
+
+}
+
+    /*Vista para celular*/
+@media (max-width: 600px) {
+
+  .main-titleini {
+    color: white; /* Color del texto del título principal */
+    padding-top: 20px; /* Espacio arriba del título principal */
+    font-size: 16px; /* Tamaño de fuente del título principal */
+    margin: 0; /* Sin márgenes alrededor del título */
+  }
+
+/* Contenedor que envuelve las cards dentro del contenedor de cards */
+  .card-gridini {
+    background-color: #FFC107; /* Color de fondo amarillo */
+    display: grid; /* Usar Grid Layout para organizar las cards */
+    grid-template-columns: repeat(2, 1fr); /* dos columnas de igual tamaño */
+  }
+   /*Estilo indivial para cada card*/
+   .cardini {
+    background-color: #FFC107; /* Color de fondo de las cards */
+    border-radius: 8px; /* Bordes redondeados para las cards */
+    padding: 10px; /* Espaciado interno en las cards */
+    text-align: center; /* Centra el texto y contenido dentro de cada card */
+    width: 150px; /* Ancho completo dentro del contenedor */
+    height: 150px; /* Altura fija de las cards */
+  }
+
+    /* Título de la card */
+.card-titleini {
+  font-size: 15px; /* Tamaño de la fuente */
+}
+
+/* Contenedor principal de las cards */
+.card-containerini {
+  max-width: 400px; /* Ancho máximo del contenedor */ 
+}
+
+}

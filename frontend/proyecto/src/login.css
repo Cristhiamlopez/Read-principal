@@ -25,8 +25,8 @@
 .Login-form h1 {
   margin-bottom: 2rem; /* Espacio debajo del título */
   text-align: center; /* Centra el texto */
-  font-size: 1.5rem; /* Tamaño de fuente del título */
-  color: #333; /* Color del texto */
+  font-size: 30px; /* Tamaño de fuente del título */
+  color: black; /* Color del texto */
 }
 
 /* Estilo para los contenedores de los campos del formulario */
@@ -36,6 +36,7 @@
 
 /* Estilo para las etiquetas de los campos del formulario */
 .Login-form label {
+  font-size: 22px;
   display: block; /* Hace que la etiqueta ocupe toda la línea */
   margin-bottom: 0.5rem; /* Espacio debajo de la etiqueta */
   font-weight: bold; /* Texto en negrita */
@@ -63,7 +64,7 @@
   border: none; /* Sin borde */
   border-radius: 4px; /* Bordes redondeados */
   cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
-  font-size: 1rem; /* Tamaño de fuente del botón */
+  font-size: 20px; /* Tamaño de fuente del botón */
 }
 
 /* Efecto al pasar el cursor sobre el botón de enviar */
@@ -104,16 +105,129 @@
 
 /* Estilos para el enlace de recuperación de contraseña */
 .recover-password-link {
-  display: block; /* Hace que el enlace ocupe toda la línea */
   margin-top: 2rem; /* Espacio arriba del enlace */
   text-align: center; /* Centra el texto del enlace */
   color: white; /* Color del texto del enlace */
   text-decoration: none; /* Quita el subrayado del enlace */
-  font-size: 0.875rem; /* Tamaño de fuente del enlace */
-  font-size: 15px;
+  font-size: 20px; /* Tamaño de fuente del enlace */
 }
 
 /* Efecto al pasar el cursor sobre el enlace de recuperación de contraseña */
 .recover-password-link:hover {
+  font-size: 22px;
   text-decoration: underline; /* Subraya el enlace cuando se pasa el cursor */
+}
+
+/*Vista para tablet*/
+@media (max-width: 1000px) {
+
+  /* Estilos para el formulario de inicio de sesión */
+.Login-form {
+  background: #FFC107; /* Fondo blanco para el formulario */
+  padding:  1rem; /* Espaciado interno del formulario */
+  border-radius: 8px; /* Bordes redondeados */
+  margin: 30px;/*margenes para el formulario*/
+}
+
+/* Estilo para el título del formulario */
+.Login-form h1 {
+  margin-bottom: 2rem; /* Espacio debajo del título */
+  text-align: center; /* Centra el texto */
+  font-size: 20px; /* Tamaño de fuente del título */
+  color: black; /* Color del texto */
+}
+
+/* Estilo para las etiquetas de los campos del formulario */
+.Login-form label {
+  font-size: 18px;
+  display: block; /* Hace que la etiqueta ocupe toda la línea */
+  margin-bottom: 0.5rem; /* Espacio debajo de la etiqueta */
+  font-weight: bold; /* Texto en negrita */
+  color: black; /* Color del texto */
+}
+
+.Login-form button[type="submit"] {
+  margin-top: 20px;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  padding: 0.75rem; /* Espaciado interno del botón */
+  background-color: #212529; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  font-size: 17px; /* Tamaño de fuente del botón */
+}
+
+/* Estilos para el enlace de recuperación de contraseña */
+.recover-password-link {
+  margin-top: 2rem; /* Espacio arriba del enlace */
+  text-align: center; /* Centra el texto del enlace */
+  color: white; /* Color del texto del enlace */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  font-size: 16px; /* Tamaño de fuente del enlace */
+}
+
+/* Efecto al pasar el cursor sobre el enlace de recuperación de contraseña */
+.recover-password-link:hover {
+  font-size: 17px;
+  text-decoration: underline; /* Subraya el enlace cuando se pasa el cursor */
+}
+
+}
+
+/*Vista para celular*/
+@media (max-width: 600px) {
+
+  /* Estilos para el formulario de inicio de sesión */
+.Login-form {
+  background: #FFC107; /* Fondo blanco para el formulario */
+  padding:  1rem; /* Espaciado interno del formulario */
+  border-radius: 8px; /* Bordes redondeados */
+  margin: 30px;/*margenes para el formulario*/
+}
+
+/* Estilo para el título del formulario */
+.Login-form h1 {
+  margin-bottom: 2rem; /* Espacio debajo del título */
+  text-align: center; /* Centra el texto */
+  font-size: 16px; /* Tamaño de fuente del título */
+  color: black; /* Color del texto */
+}
+
+/* Estilo para las etiquetas de los campos del formulario */
+.Login-form label {
+  font-size: 15px;
+  display: block; /* Hace que la etiqueta ocupe toda la línea */
+  margin-bottom: 0.5rem; /* Espacio debajo de la etiqueta */
+  font-weight: bold; /* Texto en negrita */
+  color: black; /* Color del texto */
+}
+
+.Login-form button[type="submit"] {
+  margin-top: 20px;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  padding: 0.75rem; /* Espaciado interno del botón */
+  background-color: #212529; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  font-size: 14px; /* Tamaño de fuente del botón */
+}
+
+/* Estilos para el enlace de recuperación de contraseña */
+.recover-password-link {
+  margin-top: 2rem; /* Espacio arriba del enlace */
+  text-align: center; /* Centra el texto del enlace */
+  color: white; /* Color del texto del enlace */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  font-size: 14px; /* Tamaño de fuente del enlace */
+}
+
+/* Efecto al pasar el cursor sobre el enlace de recuperación de contraseña */
+.recover-password-link:hover {
+  font-size: 15px;
+  text-decoration: underline; /* Subraya el enlace cuando se pasa el cursor */
+}
+
 }

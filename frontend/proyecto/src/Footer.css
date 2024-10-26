@@ -1,54 +1,109 @@
 /* Estilo para el pie de página */
 .footer {
-    background-color:  #212529; /* Color de fondo claro */
-    padding: 1rem 2rem; /* Espaciado interno del footer */
-    border-top: none; /* Línea superior de separación */
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    padding: 40px;
-  }
-  
-  /* Contenedor principal del contenido del footer */
+  background-color: #212529; /* Color de fondo oscuro */
+  padding: 1rem 2rem; /* Espaciado interno del footer */
+  border-top: none; /* Línea superior de separación */
+  color: white; /* Color del texto */
+  font-family: Arial, Helvetica, sans-serif; /* Tipo de letra */
+  font-size: 22px; /* Tamaño de letra */
+}
+
+/* Contenedor principal del contenido del footer */
+.footer-content {
+  display: flex; /* Usar flexbox para organizar el contenido */
+  justify-content: space-between; /* Espaciado entre el contenido izquierdo y derecho */
+  align-items: center; /* Alineación vertical centrada */
+}
+
+/* Estilo para la sección izquierda del footer */
+.footer-left {
+  flex: 1; /* Permite que el .footer-left ocupe el espacio disponible */
+  display: flex; /* Usar flexbox para organizar los elementos */
+  margin-left: 150px; /* Espacio a la izquierda */
+}
+
+/* Estilo para la sección derecha del footer */
+.footer-right {
+  display: flex; /* Usar flexbox para organizar el contenido */
+  flex-direction: column; /* Organizar los elementos en una columna */
+  align-items: flex-end; /* Alinear los elementos a la derecha */
+  margin-right: 150px; /* Espacio a la derecha */
+}
+
+/* Estilo para los íconos de redes sociales */
+.social-icons {
+  display: flex; /* Usar flexbox para organizar los íconos */
+  gap: 1rem; /* Espacio entre los íconos */
+  margin-top: 0.5rem; /* Espacio superior para separar del texto */
+  margin-bottom: 0.5rem;
+  margin-right: 120px;
+}
+
+/* Estilo para los íconos de redes sociales */
+.social-icons a {
+  color: whitesmoke; /* Color de los íconos */
+  font-size: 1.5rem; /* Tamaño de los íconos */
+  text-decoration: none; /* Quitar subrayado */
+}
+
+/* Cambiar color de los íconos al pasar el ratón */
+.social-icons a:hover {
+  color: #007bff; /* Color azul para el hover */
+}
+
+/* Para pantallas de tabletas (ancho entre 600px y 900px) */
+@media (max-width: 1000px) {
   .footer-content {
-    display: flex; /* Usar flexbox para organizar el contenido */
-    justify-content: space-between; /* Espaciado entre el contenido izquierdo y derecho */
-    align-items: center; /* Alineación vertical centrada */
+    font-size: 17px;
+    flex-direction: column; /* Cambia la dirección de los elementos a columna */
+    align-items: center; /* Centra los elementos en la columna */
   }
-  
-  /* Estilo para la sección izquierda del footer */
-  .footer-left {
-    flex: 1; /* Permite que el .footer-left ocupe el espacio disponible */
-    display: flex;
-    margin-left: 150px; /* Ajusta este valor según sea necesario para moverlo hacia la izquierda */
-  }
-  
-  /* Estilo para la sección derecha del footer */
+
+  .footer-left,
   .footer-right {
-    display: flex; /* Usar flexbox para organizar el contenido */
-    flex-direction: column; /* Organizar los elementos en una columna */
-    align-items: flex-end; /* Alinear los elementos a la derecha */
-    margin-right: 150px;
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-right: 0; /* Elimina el margen derecho */
+    text-align: center; /* Centra el texto */
+    align-items: center;/* Centra los elementos */
   }
-  
-  /* Estilo para los íconos de redes sociales */
   .social-icons {
-    display: flex; /* Usar flexbox para organizar los íconos */
-    gap: 1rem; /* Espacio entre los íconos */
-    margin-top: 0.5rem; /* Espacio superior para separar del texto */
-    margin-right: 120px;
+    margin: 10px 0; /* Espacio vertical entre los íconos y el texto */
+    justify-content: center; /* Centra los íconos de redes sociales */
+
   }
-  
-  /* Estilo para los íconos de redes sociales */
+
   .social-icons a {
-    color: whitesmoke; /* Color de los íconos */
-    font-size: 1.5rem; /* Tamaño de los íconos */
-    text-decoration: none; /* Quitar subrayado */
+    font-size: 1.2rem; /* Reduce el tamaño de los íconos en móviles */
+    justify-content: center; /* Centra los íconos de redes sociales */
   }
-  
-  /* Cambiar color de los íconos al pasar el ratón */
-  .social-icons a:hover {
-    color: #007bff; /* Color azul para el hover */
+}
+
+/* Para pantallas de móviles (ancho menor a 600px) */
+@media (max-width: 600px) {
+  .footer-content {
+    font-size: 15px;
+    flex-direction: column; /* Organiza todos los elementos en una sola columna */
+    align-items: center; /* Centra los elementos */
   }
-  
-  
+
+  .footer-left,
+  .footer-right {
+    margin: 0; /* Elimina márgenes en móviles */
+    text-align: center; /* Centra el texto en móviles */
+    padding: 0 20px; /* Añade padding para mayor espacio */
+    justify-content: center; /* Centra los íconos de redes sociales */
+    align-items: center;/* Centra los elementos */
+  }
+
+  .social-icons {
+    margin: 10px 0; /* Espacio vertical entre los íconos y el texto */
+    justify-content: center; /* Centra los íconos de redes sociales */
+
+  }
+
+  .social-icons a {
+    font-size: 1.2rem; /* Reduce el tamaño de los íconos en móviles */
+    justify-content: center; /* Centra los íconos de redes sociales */
+  }
+
+}

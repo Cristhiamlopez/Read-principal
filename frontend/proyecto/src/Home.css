@@ -1,88 +1,89 @@
 /* Eliminar márgenes y relleno de la página */
 body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+  margin: 0; /* Elimina el margen por defecto del navegador */
+  padding: 0; /* Elimina el padding por defecto del navegador */
+  width: 100%; /* Asegura que el ancho de la página ocupe el 100% */
+  height: 100%; /* Asegura que la altura de la página ocupe el 100% */
 }
 
 /* Estilos de la sección principal de la página */
 .home {
-  text-align: center;
+  text-align: center; /* Centra el texto en la sección principal */
   padding: 0; /* Elimina el padding alrededor del contenedor principal */
 }
 
 /* Estilos del carrusel */
 .carousel {
-  position: relative;
-  width: 100%; /* Ocupa todo el ancho disponible */
-  margin: 0; /* Elimina cualquier margen */
-  overflow: hidden;
+  position: relative; /* Posiciona el carrusel relativamente para poder colocar los botones dentro */
+  width: 100%; /* Ocupa todo el ancho disponible del contenedor padre */
+  margin: 0; /* Elimina cualquier margen alrededor del carrusel */
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga del carrusel */
   border-radius: 0; /* Quita el borde redondeado si se desea un borde continuo */
 }
 
 .carousel-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Utiliza flexbox para organizar las imágenes del carrusel */
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center; /* Centra las imágenes verticalmente */
 }
 
 .carousel img {
   width: 100%; /* La imagen ocupa todo el ancho del carrusel */
-  height: 900px; /*alturA*/
+  height: 900px; /* Altura fija del carrusel, se puede ajustar en media queries */
   border-radius: 0; /* Quita el borde redondeado si se desea un borde continuo */
 }
 
+/* Estilo para los botones del carrusel */
 .carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  padding: 0.5rem;
-  cursor: pointer;
+  position: absolute; /* Posiciona los botones absolutamente dentro del carrusel */
+  top: 50%; /* Centra verticalmente los botones */
+  transform: translateY(-50%); /* Ajusta la posición vertical de los botones para centrar */
+  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente negro para los botones */
+  border: none; /* Elimina el borde del botón */
+  color: white; /* Color del texto en los botones */
+  font-size: 2rem; /* Tamaño de la fuente de los botones */
+  padding: 0.5rem; /* Espaciado interno de los botones */
+  cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
 }
 
 .carousel-button.prev {
-  left: 10px;
+  left: 10px; /* Posición del botón anterior a la izquierda */
 }
 
 .carousel-button.next {
-  right: 10px;
+  right: 10px; /* Posición del botón siguiente a la derecha */
 }
 
 /* Estilos para el contenedor de imágenes */
 .image-container {
-  background-color:  #212529;
+  background-color: #212529; /* Color de fondo del contenedor de imágenes */
   display: flex; /* Usa flexbox para alinear las imágenes en una fila */
   flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias filas si es necesario */
   justify-content: center; /* Centra las imágenes horizontalmente en el contenedor */
   gap: 200px; /* Espacio entre las imágenes */
-  padding: 40px; /* Padding alrededor del contenedor */
+  padding: 20px; /* Padding alrededor del contenedor */
   box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
 }
 
-/* Estilos para las imágenes dentro del contenedor */
+/* Estilos para las imágenes dentro del contenedor de proveedores */
 .image-container img {
   width: 150px; /* Ajusta el ancho de las imágenes */
-  height:100PX; /* altura
-  border-radius: 5px; /* Opcional: Añade bordes redondeados */
+  height: auto; /* Mantiene la proporción de las imágenes */
+  border-radius: 5px; /* Opcional: Añade bordes redondeados a las imágenes */
 }
 
-/* Estilos sedes*/
-
+/* Estilos para las sedes */
 .container-fluid {
   background-color: white; /* Establece el color de fondo del contenedor en blanco */
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* Establece la fuente para el contenedor */
 }
 
 /* Estilo para el título de las sucursales */
 .branch-title {
+  font-size: 30px;
   text-align: center; /* Centra el texto del título horizontalmente */
-  margin-top: 0%; /* Agrega un margen superior de 4 rem para separar del contenido anterior */
-  padding-top: 4%; /* Agrega un relleno superior de 5 rem para separar el contenido del borde superior */
+  margin-top: 0%; /* Agrega un margen superior de 0 para separar del contenido anterior */
+  padding-top: 4%; /* Agrega un relleno superior para separar el contenido del borde superior */
 }
 
 /* Contenedor que organiza las sucursales en una fila flexible */
@@ -94,40 +95,185 @@ body, html {
 
 /* Estilo para cada elemento de sucursal */
 .branch {
-  flex: 1 1 45%; /* Permite que el elemento ocupe aproximadamente el 45% del ancho del contenedor, ajustándose según el espacio disponible */
-  padding: 2rem; /* Agrega un relleno interno de 2 rem alrededor del contenido del elemento */
+  flex: 1 1 45%; /* Permite que el elemento ocupe aproximadamente el 45% del ancho del contenedor */
+  padding: 2rem; /* Agrega un relleno interno alrededor del contenido del elemento */
   box-sizing: border-box; /* Incluye el padding y los bordes en el cálculo del ancho total del elemento */
   text-align: center; /* Centra el texto horizontalmente dentro del elemento */
 }
 
 /* Estilo para el nombre de la sucursal */
 .branch-name {
-  margin-bottom: 1rem; /* Agrega un margen inferior de 1 rem para separar del contenido siguiente */
+  font-size: 25px;
+  margin-bottom: 1rem; /* Agrega un margen inferior para separar del contenido siguiente */
 }
 
 /* Estilo para la dirección de la sucursal */
 .branch-address {
-  font-size: 22px;
-  margin-bottom: 1rem; /* Agrega un margen inferior de 1 rem para separar del contenido siguiente */
+  font-size: 22px; /* Tamaño de letra para la dirección */
+  margin-bottom: 1rem; /* Agrega un margen inferior para separar del contenido siguiente */
 }
 
 /* Estilo para la descripción de la sucursal */
 .branch-description {
-  margin-bottom: 1rem; /* Agrega un margen inferior de 1 rem para separar del contenido siguiente */
-  font-size: 20px;
+  margin-bottom: 1rem; /* Agrega un margen inferior para separar del contenido siguiente */
+  font-size: 20px; /* Tamaño de letra para la descripción */
 }
 
 /* Estilo para el contacto de la sucursal */
 .branch-contact {
-  margin-bottom: 2rem; /* Agrega un margen inferior de 2 rem para separar del contenido siguiente */
+  margin-bottom: 2rem; /* Agrega un margen inferior para separar del contenido siguiente */
 }
+
+/* Estilos de las imágenes de las sucursales */
 .branch img {
-  max-width: 450px; /* Asegura que la imagen no exceda el ancho del contenedor de la sucursal */
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor de la sucursal */
   height: auto; /* Mantiene la proporción de la imagen */
   display: block; /* Elimina el espacio debajo de la imagen causado por el alineamiento de texto */
   margin: 0 auto; /* Centra la imagen horizontalmente dentro del contenedor */
 }
 
+/* Media Queries para hacer el diseño responsive */
 
+/* Para pantallas de tabletas (ancho máximo de 900px) */
+@media (max-width: 1000px) {
+  .carousel img {
+    height: 600px; /* Ajusta la altura del carrusel en pantallas más pequeñas */
+  }
+
+  .image-container {
+    gap: 50px; /* Reduce el espacio entre imágenes en pantallas pequeñas */
+  }
+
+   /* Estilos para las imágenes dentro del contenedor de proveedores */
+ .image-container img {
+  width: 90px; /* Ajusta el ancho de las imágenes */
+  height: 100px; /* Mantiene la proporción de las imágenes */
+  padding: 5px; /* Reduce el padding alrededor del contenedor en móviles */
+  display: flex;
+}
+
+  .branch {
+    flex: 1 1 100%; /* Cada sucursal ocupa el 100% del ancho en pantallas más pequeñas */
+  }
+
+    /* Estilo para el título de las sucursales */
+.branch-title {
+  text-align: center; /* Centra el texto del título horizontalmente */
+  margin-top: 0%; /* Agrega un margen superior de 0 para separar del contenido anterior */
+  padding-top: 5%; /* Agrega un relleno superior para separar el contenido del borde superior */
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Estilo para cada elemento de sucursal */
+.branch {
+  padding: 1rem; /* Agrega un relleno interno alrededor del contenido del elemento */
+  box-sizing: border-box; /* Incluye el padding y los bordes en el cálculo del ancho total del elemento */
+  text-align: center; /* Centra el texto horizontalmente dentro del elemento */
+}
+
+/* Estilo para el nombre de la sucursal subtitulo */
+.branch-name {
+  margin-bottom: 1rem; /* Agrega un margen inferior para separar del contenido siguiente */
+  font-size: 18px;
+}
+
+/* Estilo para la dirección de la sucursal */
+.branch-address {
+  font-size: 16px; /* Tamaño de letra para la dirección */
+  margin-bottom: 1rem; /* Agrega un margen inferior para separar del contenido siguiente */
+}
+
+/* Estilo para la descripción de la sucursal */
+.branch-description {
+  margin-bottom: 1rem; /* Agrega un margen inferior para separar del contenido siguiente */
+  font-size: 16px; /* Tamaño de letra para la descripción */
+}
+
+/* Estilo para el contacto de la sucursal */
+.branch-contact {
+  margin-bottom: 2rem; /* Agrega un margen inferior para separar del contenido siguiente */
+  font-size: 16px;
+}
+
+/* Estilos de las imágenes de las sucursales */
+.branch img {
+  width: 350px;/* Ajusta el ancho de las imágenes */
+  height: 300px; /* Mantiene la proporción de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente dentro del contenedor */
+}
+}
+
+/* Para pantallas de móviles (ancho máximo de 600px) */
+@media (max-width: 600px) {
+  .carousel img {
+    height: 450px; /* Ajusta la altura del carrusel en móviles */
+  }
+
+  /* Estilos para las imágenes dentro del contenedor de proveedores */
+ .image-container img {
+  width: 50px; /* Ajusta el ancho de las imágenes */
+  height: 60px; /* Mantiene la proporción de las imágenes */
+  padding: 5px; /* Reduce el padding alrededor del contenedor en móviles */
+  display: flex;
+  }
+
+  .image-container img {
+    width: 100px; /* Reduce aún más el tamaño de las imágenes en móviles */
+  }
+
+  .branch {
+    padding: 1rem; /* Reduce el padding en los elementos de sucursal en móviles */
+  }
+
+  /* Estilo para el título de las sucursales */
+.branch-title {
+  text-align: center; /* Centra el texto del título horizontalmente */
+  margin-top: 0%; /* Agrega un margen superior de 0 para separar del contenido anterior */
+  padding-top: 5%; /* Agrega un relleno superior para separar el contenido del borde superior */
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Estilo para cada elemento de sucursal */
+.branch {
+  padding: 1rem; /* Agrega un relleno interno alrededor del contenido del elemento */
+  box-sizing: border-box; /* Incluye el padding y los bordes en el cálculo del ancho total del elemento */
+  text-align: center; /* Centra el texto horizontalmente dentro del elemento */
+}
+
+/* Estilo para el nombre de la sucursal */
+.branch-name {
+  margin-bottom: 1rem; /* Agrega un margen inferior para separar del contenido siguiente */
+  font-size: 15px;
+}
+
+/* Estilo para la dirección de la sucursal */
+.branch-address {
+  font-size: 14px; /* Tamaño de letra para la dirección */
+  margin-bottom: 1rem; /* Agrega un margen inferior para separar del contenido siguiente */
+}
+
+/* Estilo para la descripción de la sucursal */
+.branch-description {
+  margin-bottom: 1rem; /* Agrega un margen inferior para separar del contenido siguiente */
+  font-size: 14px; /* Tamaño de letra para la descripción */
+}
+
+/* Estilo para el contacto de la sucursal */
+.branch-contact {
+  margin-bottom: 2rem; /* Agrega un margen inferior para separar del contenido siguiente */
+  font-size: 14px;
+}
+
+/* Estilos de las imágenes de las sucursales */
+.branch img {
+  width: 250px;/* Ajusta el ancho de las imágenes */
+  height: 200px; /* Mantiene la proporción de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente dentro del contenedor */
+}
+
+
+}
 
 
