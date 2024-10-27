@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from 'axios';
 import './Login.css';
 
@@ -75,8 +75,8 @@ export function Login() {
                     </div>
                 </div>
                 <button type="submit">INGRESAR</button>
-                <a href="/recover-password" className="recover-password-link">¿Olvidaste tu contraseña?</a>
-                <a href="/Register" className="recover-password-link">REGISTRARSE</a>
+                <Link to="/recover-password" className="recover-password-link">¿Olvidaste tu contraseña?</Link>
+                <Link to="/Register" className="recover-password-link">REGISTRARSE</Link> {/* Cambiado a Link */}
             </form>
         </main>
     );
