@@ -3,18 +3,25 @@ const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
 const bcrypt = require("bcrypt"); // Importar bcrypt
+const dotenv = require("dotenv")
 
 // 2 - Configuración
 const app = express();
 app.use(express.json());
 app.use(cors());
+dotenv.config();
 
 // 3 - Conexión a la base de datos
 const conexion = mysql.createConnection({
-    host: "localhost",
+    /*host: "localhost",
     database: "personas",
     user: "root",
-    password: ""
+    password: ""*/
+    host: process.env.MYSQL_ADDON_HOST,
+    database : process.env.MYSQL_ADDON_DB,
+    user: process.env.MYSQL_ADDON_USER,
+    password: process.env.MYSQL_ADDON_PASSWORD
+
 });
 
 // 4 - Rutas
