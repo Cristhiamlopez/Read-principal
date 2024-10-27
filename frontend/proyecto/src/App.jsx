@@ -6,7 +6,7 @@ import Home from "./Home";
 import Carta from "./Carta";
 import Inicio from "./Inicio";
 import Footer from "./Footer";
-import Register from "./assets/Register";
+import Register from "./Register";
 
 
 function App() {
