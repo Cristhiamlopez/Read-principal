@@ -21,7 +21,7 @@ const conexion = mysql.createConnection({
     database : process.env.MYSQL_ADDON_DB,
     user: process.env.MYSQL_ADDON_USER,
     port: process.evn.MYSQL_ADDON_PORT,
-    password: process.env.MYSQL_ADDON_PASSWORD
+    password: process.evn.MYSQL_ADDON_PASSWORD
     
 
 });
