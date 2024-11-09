@@ -5,7 +5,7 @@ const cors = require("cors");
 const bcrypt = require("bcrypt"); // Importar bcrypt
 const dotenv = require("dotenv")
 
-// 2 - Configuración
+
 const app = express();
 app.use(express.json());
 app.use(cors());
