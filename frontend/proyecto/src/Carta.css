@@ -173,22 +173,23 @@
 .sub-title {
   font-size: 15px; /* Tamaño de fuente para el subtítulo */
   color: white; /* Color blanco para el subtítulo */
-  margin: 15px; /* Espacio inferior para separar del contenedor de cards */
+  margin: 8px; /* Espacio inferior para separar del contenedor de cards */
 }
 /* Contenedor que envuelve las cards dentro del contenedor de cards */
 .card-grid {
   display: grid; /* Usa Grid Layout para organizar las cards */
   grid-template-columns: repeat(2, 1fr); /* dos columnas, cada una ocupando un medio del ancho del contenedor */
   gap: 10px; /* Espacio entre las cards */
-  padding: 10px; /* Espacio interno alrededor del contenedor de las cards */
+  padding: 5px; /* Espacio interno alrededor del contenedor de las cards */
   max-width: 100%; /* Ancho máximo para el contenedor de las cards */
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  margin: 5px; /* Centra el contenedor horizontalmente */
+  margin-right: 20px;/*centra el contenedor a la derecha*/
 }
 /* Estilos para el título de cada card */
 .card-title {
   color: white;
   font-size: 14px; /* Tamaño de fuente para el título */
-  margin-top: 10px; /* Espaciado superior e inferior para separar el título de la imagen y el párrafo */
+  margin-top: 5px; /* Espaciado superior e inferior para separar el título de la imagen y el párrafo */
   margin-bottom: 5px;
 
 }
@@ -205,9 +206,9 @@
 .card {
   background-color: #FFC107; /* Color de fondo amarillo para las cards */
   border-radius: 8px; /* Bordes redondeados para darle un aspecto suave */
-  padding: 15px; /* Espaciado interno para el contenido dentro de la card */
+  padding: 8px; /* Espaciado interno para el contenido dentro de la card */
   text-align: center; /* Centra el texto y otros contenidos dentro de la card */
-  width: 200px; /* Ancho máximo para cada card */
+  width: 175px; /* Ancho máximo para cada card */
   height: 220px; /* Altura fija reducida para las cards */
   display: flex; /* Usa Flexbox para alinear el contenido verticalmente */
   flex-direction: column; /* Organiza los elementos verticalmente */
