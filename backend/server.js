@@ -43,7 +43,7 @@ app.post('/Login', (req, res) => {
                 return res.status(401).json({ message: "Email o contraseña incorrectos." });
             }
         } else {
-            return res.status(500).json({ message: "Error al conectarse a la base de datos" })
+            return res.status(401).json({ message: "Email o contraseña incorrectos." })
         }
     });
 });
