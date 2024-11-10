@@ -23,7 +23,7 @@ export function Login() {
             alert('Por favor, ingrese un correo electrónico válido.');
             return;
         }
-        axios.post('http://localhost:8081/Login', { email, password })
+        axios.post(`${import.meta.env.VITE_API_URL}/Login`, { email, password })
             .then(res => {
                 console.log(res);
 

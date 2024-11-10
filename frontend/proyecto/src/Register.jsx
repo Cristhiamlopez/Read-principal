@@ -24,7 +24,7 @@ export function Register() {
             return;
         }
     
-        axios.post('http://localhost:8081/Register', { email, password })
+        axios.post(`${import.meta.env.VITE_API_URL}/Register`, { email, password })
             .then(res => {
                 console.log(res);
     

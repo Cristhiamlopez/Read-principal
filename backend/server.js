@@ -28,7 +28,7 @@ const conexion = mysql.createConnection({
 
 // 4 - Rutas
 // Ruta de inicio de sesión
-app.post('/login', (req, res) => {
+app.post('/Login', (req, res) => {
     const query = "SELECT * FROM administrador WHERE email = ?";
     conexion.query(query, [req.body.email], async (err, data) => {
         if (err) return res.status(500).json({ message: "Error en el servidor." });
@@ -43,7 +43,7 @@ app.post('/login', (req, res) => {
                 return res.status(401).json({ message: "Email o contraseña incorrectos." });
             }
         } else {
-            return res.status(401).json({ message: "Email o contraseña incorrectos." })
+            return res.status(500).json({ message: "Error al conectarse a la base de datos" })
         }
     });
 });
@@ -77,6 +77,14 @@ app.post('/Register', async (req, res) => {
 });
 
 // 5 - Poner a escuchar al servidor
-app.listen(8081, () => {
+/*app.listen(8081, () => {
     console.log("Servidor escuchando en el puerto 8081...");
+});*/
+
+const PORT = process.env.PORT || 8081;
+
+app.listen(PORT, () => {
+    
+console.log(`Servidor escuchando en el puerto ${PORT}...`);
 });
+
